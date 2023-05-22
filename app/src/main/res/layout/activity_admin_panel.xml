@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Activity.AdminPanel">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rectangle">
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Admin Panel"
+            android:layout_weight="0.7"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content">
+        </TextView>
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:background="@null"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_baseline_power_settings_new_24"
+            android:layout_height="wrap_content">
+        </ImageButton>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:elevation="30dp"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/Sellerinfo"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:elevation="30dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="SELLERS INFO">
+        </TextView>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/seller">
+        </ImageView>
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:elevation="30dp"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/complainst"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:elevation="30dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="MESSAGE">
+        </TextView>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/chat">
+        </ImageView>
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:elevation="30dp"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/User"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:elevation="30dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text=" USERS INFO">
+        </TextView>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/man">
+        </ImageView>
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

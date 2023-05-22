@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".authactivities.Splash">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/shape_rectangle"
+        android:gravity="center"
+
+        android:layout_height="100dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="25dp"
+            android:text="E-CART"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_margin="20dp"
+            android:fontFamily="sans-serif-black"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_margin="10dp">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/onlineshopping" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="25dp"
+        android:layout_marginTop="30dp"
+        android:text="HAPPY SHOPPING ! "
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-black"
+        android:layout_gravity="center"
+        android:background="@drawable/back4"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

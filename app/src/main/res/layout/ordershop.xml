@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="10dp"
+
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order Detail"
+            android:textStyle="bold"
+            android:textColor="#0000FF"
+            android:textAlignment="center"
+            >
+
+        </TextView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/OrderNo"
+                android:layout_height="wrap_content"
+                android:text="Order NO #"></TextView>
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="DATE"></TextView>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/shopnmae"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Shop Name">
+
+        </TextView>
+        <TextView
+            android:id="@+id/TotalAmount"
+            android:layout_width="match_parent"
+            android:text="Total Amount"
+            android:layout_height="match_parent">
+
+        </TextView>
+        <TextView
+            android:id="@+id/ordeStatus"
+            android:layout_width="match_parent"
+            android:text="Order Status"
+            android:textColor="#00FF00"
+            android:layout_height="match_parent">
+
+        </TextView>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

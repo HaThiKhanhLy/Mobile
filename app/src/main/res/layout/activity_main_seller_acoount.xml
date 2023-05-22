@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainSellerAcoount">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/control"
+
+        android:background="@drawable/shape_rectangle">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/roundImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:padding="3dp"
+            android:background="@color/black"
+            android:scaleType="centerCrop"
+            android:src="@drawable/imageholder"
+            app:riv_mutate_background="true"
+            app:riv_oval="true" />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:layout_toRightOf="@+id/roundImage"
+    android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:text="Name"
+            android:textColor="#ffffff"
+            android:textSize="15dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+    <TextView
+        android:id="@+id/Shopname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Name"
+
+        android:layout_toRightOf="@+id/roundImage"
+        android:padding="2dp"
+        android:text="Shopname"
+        android:textColor="#ffffff"
+        android:textSize="15dp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/Email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Shopname"
+        android:layout_toRightOf="@+id/roundImage"
+        android:padding="2dp"
+        android:text="Email"
+        android:textColor="#ffffff"
+        android:textSize="15dp"
+        android:textStyle="bold">
+
+    </TextView>
+</LinearLayout>
+
+        <ImageButton
+            android:id="@+id/logout"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:background="@null"
+            android:src="@drawable/ic_baseline_power_settings_new_24"
+            tools:ignore="SpeakableTextPresentCheck">
+
+        </ImageButton>
+        <ImageButton
+            android:id="@+id/message"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toLeftOf="@+id/addproduct"
+            android:background="@null"
+            android:src="@drawable/ic_baseline_message_24"
+            tools:ignore="SpeakableTextPresentCheck">
+
+        </ImageButton>
+
+        <ImageView
+            android:id="@+id/addproduct"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:layout_toLeftOf="@+id/logout"
+            android:src="@drawable/additem" />
+        <LinearLayout
+            android:id="@+id/below"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_below="@id/roundImage"
+            android:layout_height="40dp">
+            <TextView
+                android:id="@+id/product"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/shap_retc"
+                android:text="Product"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+            </TextView>
+            <TextView
+                android:id="@+id/order"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="Order"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_below="@id/control"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/productui">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/searchlay"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/searchtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:drawableLeft="@drawable/ic_baseline_search_24">
+
+            </EditText>
+            <ImageButton
+                android:id="@+id/catogery"
+                android:layout_weight="0.9"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_category_24">
+
+            </ImageButton>
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/recyclerofproduct"
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            android:layout_below="@+id/searchlay"
+            tools:listitem="@layout/row_products_shown"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@id/control"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ordertui">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/searchlay1"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/searchtextorder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:drawableLeft="@drawable/ic_baseline_search_24">
+
+            </EditText>
+            <ImageButton
+                android:id="@+id/catogeryorder"
+                android:layout_weight="0.9"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_category_24">
+
+            </ImageButton>
+
+
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/recycleroforder1"
+            android:orientation="vertical"
+            tools:listitem="@layout/order_user_row"
+            android:layout_below="@id/searchlay1"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Adminuserorder">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/shape_rectangle">
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:background="@null"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            android:layout_height="wrap_content">
+        </ImageButton>
+
+
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        app:cardElevation="20dp"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="20dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/product"
+            android:layout_width="wrap_content"
+            android:textAlignment="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/shap_retc"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="Orders"
+            android:layout_height="match_parent">
+        </TextView>
+    </androidx.cardview.widget.CardView>
+    <RelativeLayout
+        android:layout_below="@id/control"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ordertui">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/searchlay1"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/searchtextorder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:drawableLeft="@drawable/ic_baseline_search_24">
+
+            </EditText>
+            <ImageButton
+                android:id="@+id/catogeryorder"
+                android:layout_weight="0.9"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_category_24">
+
+            </ImageButton>
+
+
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/recycleroforder2"
+            android:orientation="vertical"
+            tools:listitem="@layout/order_user_row"
+            android:layout_below="@id/searchlay1"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+</LinearLayout>
