@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity">
+    <LinearLayout
+        android:id="@+id/below"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="5dp"
+        android:background="@drawable/shape_rectangle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:id="@+id/control"
+
+            android:background="@drawable/shape_rectangle">
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/roundImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@color/black"
+                android:padding="2dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/imageholder"
+                app:riv_mutate_background="true"
+                app:riv_oval="true" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/roundImage"
+                android:text="Name"
+
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textColor="#000000"
+                android:padding="2dp"
+                android:layout_margin="5dp"
+                android:textSize="20dp"
+                android:textStyle="bold">
+
+            </TextView>
+            <ImageButton
+                android:id="@+id/message"
+                android:layout_width="wrap_content"
+                android:background="@null"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_baseline_message_24">
+            </ImageButton>
+
+
+            <ImageView
+                android:id="@+id/cart"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                     android:layout_gravity="center"
+                android:background="@null"
+                android:src="@drawable/shoppingcart" />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/shopsRl"
+        android:layout_width="match_parent"
+        android:layout_below="@id/below"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerofshop"
+            android:layout_width="match_parent"
+            tools:listitem="@layout/shop_row"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/orderRl"
+        android:layout_width="match_parent"
+        android:layout_below="@id/below"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleroforder"
+            android:layout_width="match_parent"
+            tools:listitem="@layout/order_user_row"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@id/below"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/homeRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="30dp"
+            android:padding="10dp"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Categories"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="25dp">
+
+                </TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerofhome2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    tools:listitem="@layout/catageory_shown">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/recyclerofhome1"
+           android:layout_below="@id/cata"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+       </androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:elevation="20dp"
+        app:cardCornerRadius="3dp"
+        android:background="#EBECF0"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/home"
+                android:layout_width="50dp"
+                android:background="@null"
+               android:layout_weight="0.25"
+                android:src="@drawable/house"
+                android:layout_height="50dp">
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/shopbutt"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:layout_weight="0.25"
+                android:src="@drawable/shopico">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/orders"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="0.25"
+                android:layout_toLeftOf="@+id/settings"
+                android:background="@null"
+                android:src="@drawable/ordernow">
+
+            </ImageView>
+            <ImageView
+                android:id="@+id/settings"
+                android:layout_width="50dp"
+                android:background="@null"
+                android:layout_weight="0.25"
+                android:src="@drawable/settings"
+                android:layout_height="50dp">
+            </ImageView>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>
+
+
