@@ -102,8 +102,8 @@ RelativeLayout OrderRl;
         //
 
         // calling of functions
-        catageory();
-        loadcityshops();
+
+//        loadcityshops();
         checkuser();
         loadallorders();
         allproducts();
@@ -228,36 +228,36 @@ RelativeLayout OrderRl;
         }
     }
     // This the method to get all shops for user
-    private void loadcityshops() {
-        shoplist = new ArrayList<>();
-        shoprecycler.setHasFixedSize(true);
-        shopadapter= new Shopadapter(MainActivity.this,shoplist);
-
-
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Users");
-        databaseReference.orderByChild("accounttype").equalTo("Seller")
-                .addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                  shoplist.clear();
-                        for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                            Modelshop modelshop = dataSnapshot.getValue(Modelshop.class);
-                            shoplist.add(modelshop);
-                        }
-                        shoprecycler.setLayoutManager(new LinearLayoutManager(MainActivity.this));
-                        shoprecycler.setAdapter(shopadapter);
-                        shopadapter.notifyDataSetChanged();
-
-
-
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
-                });
-    }
+//    private void loadcityshops() {
+//        shoplist = new ArrayList<>();
+//        shoprecycler.setHasFixedSize(true);
+//        shopadapter= new Shopadapter(MainActivity.this,shoplist);
+//
+//
+//        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Users");
+//        databaseReference.orderByChild("accounttype").equalTo("Seller")
+//                .addValueEventListener(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                  shoplist.clear();
+//                        for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+//                            Modelshop modelshop = dataSnapshot.getValue(Modelshop.class);
+//                            shoplist.add(modelshop);
+//                        }
+//                        shoprecycler.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+//                        shoprecycler.setAdapter(shopadapter);
+//                        shopadapter.notifyDataSetChanged();
+//
+//
+//
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(@NonNull DatabaseError error) {
+//
+//                    }
+//                });
+//    }
 
     private void loadallorders() {
         orderlist  = new ArrayList<>();
@@ -330,31 +330,7 @@ RelativeLayout OrderRl;
         });
 
     }
-    // this method for catageory
-    private  void catageory(){
-        catagory.setHasFixedSize(true);
-        catagory.setLayoutManager(new GridLayoutManager(this,3));
-        catalist = new ArrayList<>();
-        Cata= new cata(MainActivity.this,catalist);
-        catagory.setAdapter(Cata);
-        catalist.add(new CatagoryModel("Clothes",R.drawable.clothes));
-        catalist.add(new CatagoryModel("Beverages",R.drawable.drink));
-        catalist.add(new CatagoryModel("Biscuits & Snack & Chocolates",R.drawable.snack));
-        catalist.add(new CatagoryModel("Baby Kids",R.drawable.babyboy));
-        catalist.add(new CatagoryModel("Cooking Needs",R.drawable.cooking));
-        catalist.add(new CatagoryModel("Frozen Food",R.drawable.frozenfood));
-        catalist.add(new CatagoryModel("Pharmacy",R.drawable.pharmacy));
-        catalist.add(new CatagoryModel("Vegetables & Fruits",R.drawable.vegetables));
-        catalist.add(new CatagoryModel("Beauty & Personal Care",R.drawable.cosmetics));
-        catalist.add(new CatagoryModel("Electronics",R.drawable.electronics));
-        catalist.add(new CatagoryModel("BreakFast & Dairy",R.drawable.breakfast));
-        catalist.add(new CatagoryModel("Other",R.drawable.other));
 
-
-
-
-
-    }
 
     }
 
