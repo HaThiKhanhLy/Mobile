@@ -174,6 +174,7 @@ public class Order_Detail_Shop extends AppCompatActivity {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     String uid = "" + dataSnapshot.getKey();
                     DatabaseReference ref = FirebaseDatabase.getInstance().getReference("My Orders").child(uid);
+
                     ref.orderByChild("Order_BY").equalTo(orderBy).addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {

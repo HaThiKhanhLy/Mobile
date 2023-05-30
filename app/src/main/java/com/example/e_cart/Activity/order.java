@@ -64,6 +64,7 @@ public class order extends AppCompatActivity {
     String Shopname;
     Float TotalAmount;
     String subtoatalprice1;
+    String price;
 
 // Progress
 
@@ -142,12 +143,14 @@ public class order extends AppCompatActivity {
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()){
                    ModelOrder modelOrder = dataSnapshot.getValue(ModelOrder.class);
                      ShopUid = modelOrder.getShopid();
+                    price = modelOrder.getTotal_price();
                     orderlist.add(modelOrder);
 
                 }
                 orderApdater =  new OrderApdater(subtoatalprice,order.this,orderlist);
                 orderrecycler.setAdapter(orderApdater);
                 orderApdater.notifyDataSetChanged();
+
 
 
 
@@ -177,7 +180,7 @@ public class order extends AppCompatActivity {
         hashMap.put("Order_Date", "" + currentDate);
         hashMap.put("Shop_name",Shopname);
         hashMap.put("Order_Status", "" +"Progress");
-        hashMap.put("Order_Total", "" + subtoatalprice1);
+        hashMap.put("Order_Total", "" + price);
         hashMap.put("Order_BY", "" + firebaseAuth.getUid());
         hashMap.put("Order_To", "" + ShopUid);
 
