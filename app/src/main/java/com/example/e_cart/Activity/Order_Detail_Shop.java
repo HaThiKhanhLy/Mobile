@@ -41,12 +41,11 @@ public class Order_Detail_Shop extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
+        //get các parameter
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_detail_shop);
         OrderId = findViewById(R.id.orderid);
         back= findViewById(R.id.back);
-        chats= findViewById(R.id.cahts);
         Editorder= findViewById(R.id.EditOrder);
         orderrecycler=findViewById(R.id.recyceroforder);
         date = findViewById(R.id.date);
@@ -58,6 +57,7 @@ public class Order_Detail_Shop extends AppCompatActivity {
         Order_id = getIntent().getStringExtra("orderid");
         orderBy = getIntent().getStringExtra("orderby");
         //
+        //get instance fb
         firebaseAuth = FirebaseAuth.getInstance();
         //
         orderdetail();
