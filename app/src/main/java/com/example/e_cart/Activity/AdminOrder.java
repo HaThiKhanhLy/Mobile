@@ -27,7 +27,9 @@ import java.util.ArrayList;
 public class AdminOrder extends AppCompatActivity {
     String ShopUid;
     ImageButton back;
+    //Advanced list view
     RecyclerView orderrecycler;
+    //show list dữ lieu
     ShopOrderAdpater shopOrderAdpater;
     public ArrayList<ModelOrderShop> orderlist;
     EditText search, search1;
